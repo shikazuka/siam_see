@@ -1,0 +1,115 @@
+.background-image {
+    position: relative; /* Conteneur pour les éléments en position absolue */
+    background-image: url(./image/cover-title-siam.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.button-container {
+    text-align: center; 
+}
+
+.play-button {
+    background-color: #4CAF50;
+    color: bisque;
+    border: green;
+    padding: 15px 30px;
+    font-size: 14px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.4s;
+}
+
+.play-button:hover {
+    background-color: #45a049;
+    color: aliceblue;
+}
+
+
+
+.plateau {
+    display: none;
+    grid-template-columns: repeat(5, 1fr); /* Grille 5x5 */
+    gap: 1px;
+    width: 440px; /* Largeur totale du plateau */
+    height: 440px; /* Hauteur totale du plateau */
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(242, 242, 242, 0); /* Fond transparent */
+}
+
+.case {
+    width: 85px; /* Largeur fixe pour chaque case */
+    height: 85px; /* Hauteur fixe pour chaque case */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Cache l'excès d'image si elle dépasse */
+}
+
+
+.grille-sup {
+    display: none;
+    grid-template-columns: repeat(5, 1fr); /* Grille de 5 cases */
+    gap: 5px;
+    width: 440px;
+    position: absolute;
+    top: 5%; /* Positionne la grille supérieure au-dessus du plateau */
+    left: 50%;
+    transform: translateX(-50%); /* Centre horizontalement */
+    border: solid #45a049;
+}
+
+.grille-inf {
+    display: none;
+    grid-template-columns: repeat(5, 1fr); /* Grille de 5 cases */
+    gap: 5px;
+    width: 440px;
+    position: absolute;
+    bottom: 5%; /* Positionne la grille inférieure en dessous du plateau */
+    left: 50%;
+    transform: translateX(-50%); /* Centre horizontalement */
+    border: solid #45a049;
+
+}
+
+.tour-joueur {
+    display: none; 
+    position: absolute; /* Position absolue pour le placer à droite */
+    top: 50%; /* Centré verticalement */
+    right: 20px; /* Espacement à droite */
+    transform: translateY(-50%); /* Centrer verticalement par rapport à son propre conteneur */
+    font-size: 24px; /* Taille de police */
+    font-weight: bold; /* Mettre en gras */
+    color: #4CAF50; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+}
+
+.pion {
+    max-width: 100%; /* Limite la largeur de l'image à 100% de son conteneur */
+    max-height: 100%; /* Limite la hauteur de l'image à 100% de son conteneur */
+    object-fit: contain; /* Ajuste l'image pour qu'elle soit contenue dans son conteneur sans déformer */
+}
+
+
+
+
+.grille-inf {
+    margin-top: 10px; /* Espacement entre la grille inférieure et le plateau */
+}
+
+
+
+.case:hover {
+    background-color: rgba(224, 224, 224, 0.8); /* Couleur de fond des cases au survol, légèrement transparente */
+}
+
+

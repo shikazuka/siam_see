@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Siam</title>
+</head>
+<body>
+    
+    <div class="background-image">
+        <div class="button-container">
+            <button class="play-button">Jouer</button>
+        </div>
+    </div>
+
+    <!-- Conteneur global pour les grilles et le plateau -->
+    <div class="plateau-container">
+        
+        <!-- Grille supérieure -->
+        <div class="grille-sup" id="grille-sup">
+            <div class="case" id="caseA1"  draggable="true"></div>
+            <div class="case" id="caseA2"  draggable="true"></div>
+            <div class="case" id="caseA3" draggable="true"></div>
+            <div class="case" id="caseA4" draggable="true"></div>
+            <div class="case" id="caseA5" draggable="true"></div>
+        </div>
+
+        <!-- Plateau central -->
+        <div class="plateau">
+            <div class="case" id="case1" draggable="true"></div>
+            <div class="case" id="case2" draggable="true"></div>
+            <div class="case" id="case3" draggable="true"></div>
+            <div class="case" id="case4" draggable="true"></div>
+            <div class="case" id="case5" draggable="true"></div>
+        
+            <div class="case" id="case6" draggable="true"></div>
+            <div class="case" id="case7" draggable="true"></div>
+            <div class="case" id="case8" draggable="true"></div>
+            <div class="case" id="case9" draggable="true"></div>
+            <div class="case" id="case10" draggable="true"></div>
+        
+            <div class="case" id="case11" draggable="true"></div>
+            <div class="case" id="case12" draggable="true"></div>
+            <div class="case" id="case13" draggable="true"></div>
+            <div class="case" id="case14" draggable="true"></div>
+            <div class="case" id="case15" draggable="true"></div>
+        
+            <div class="case" id="case16" draggable="true"></div>
+            <div class="case" id="case17" draggable="true"></div>
+            <div class="case" id="case18" draggable="true"></div>
+            <div class="case" id="case19" draggable="true"></div>
+            <div class="case" id="case20" draggable="true"></div>
+        
+            <div class="case" id="case21" draggable="true"></div>
+            <div class="case" id="case22" draggable="true"></div>
+            <div class="case" id="case23" draggable="true"></div>
+            <div class="case" id="case24" draggable="true"></div>
+            <div class="case" id="case25" draggable="true"></div>
+        </div>
+
+        <!-- Grille inférieure -->
+        <div class="grille-inf" id="grille-inf">
+            <div class="case" id="caseB1" draggable="true"></div>
+            <div class="case" id="caseB2" draggable="true"></div>
+            <div class="case" id="caseB3" draggable="true"></div>
+            <div class="case" id="caseB4" draggable="true"></div>
+            <div class="case" id="caseB5" draggable="true"></div>
+        </div>
+    </div>
+    <div class="tour-joueur" id="tour-joueur">Tour du Joueur 1</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
