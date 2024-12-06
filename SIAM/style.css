@@ -1,6 +1,12 @@
+body{
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+
+}
+
 .background-image {
-    position: relative; /* Conteneur pour les éléments en position absolue */
-    background-image: url(./image/cover-title-siam.jpg);
+    position: relative; 
+    background-image: url(./images/cover-title-siam.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain; 
@@ -13,6 +19,14 @@
 .button-container {
     text-align: center; 
 }
+
+.pion {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajuste les proportions */
+    cursor: pointer; /* Ajoute un curseur pour rendre les pions interactifs */
+}
+
 
 .play-button {
     background-color: #4CAF50;
@@ -47,7 +61,7 @@
 }
 
 .case {
-    width: 85px; /* Largeur fixe pour chaque case */
+   width: 85px; /* Largeur fixe pour chaque case */
     height: 85px; /* Hauteur fixe pour chaque case */
     display: flex;
     justify-content: center;
@@ -55,6 +69,13 @@
     overflow: hidden; /* Cache l'excès d'image si elle dépasse */
 }
 
+.case img {
+    width: 100%; /* Remplit la largeur de la case */
+    height: 100%; /* Remplit la hauteur de la case */
+    object-fit: contain; /* Maintient les proportions de l'image */
+    transform: none; /* Empêche tout retournement */
+    overflow: hidden; /* Évite les débordements */
+}
 
 .grille-sup {
     display: none;
@@ -65,7 +86,7 @@
     top: 5%; /* Positionne la grille supérieure au-dessus du plateau */
     left: 50%;
     transform: translateX(-50%); /* Centre horizontalement */
-    border: solid #45a049;
+
 }
 
 .grille-inf {
@@ -77,7 +98,6 @@
     bottom: 5%; /* Positionne la grille inférieure en dessous du plateau */
     left: 50%;
     transform: translateX(-50%); /* Centre horizontalement */
-    border: solid #45a049;
 
 }
 
@@ -90,7 +110,7 @@
     font-size: 24px; /* Taille de police */
     font-weight: bold; /* Mettre en gras */
     color: #4CAF50; /* Couleur du texte */
-    text-align: center; /* Centrer le texte */
+   
 }
 
 .pion {
@@ -111,5 +131,4 @@
 .case:hover {
     background-color: rgba(224, 224, 224, 0.8); /* Couleur de fond des cases au survol, légèrement transparente */
 }
-
 
