@@ -271,6 +271,32 @@ function estFaceAuRocher(pion, caseRocherId) {
             return false;
     }
 }
+function estFacePion(pion,autrePion){
+    
+    const directionPion = pion.direction;
+    const directionAutrePion = autrePion.direction;
+    const pionCaseNum = parseInt(pion.position.slice(4)); 
+    const autrePionCaseNum = parseInt(autrePion.position.slice(4));
+
+    switch (directionPion) {
+        case "haut":
+            return (autrePionCaseNum === pionCaseNum - 5) && directionAutrePion === "bas";
+        case "bas":
+            return (autrePionCaseNum === pionCaseNum + 5) && directionAutrePion === "haut";
+        case "gauche":
+            return (autrePionCaseNum === pionCaseNum - 1) && directionAutrePion === "droite";
+        case "droite":
+            return (autrePionCaseNum === pionCaseNum + 1) && directionAutrePion === "gauche";
+        default:
+            return false;
+    }
+
+}
+function pousserPion(pion,autrePion){
+    if (!estFacePion(pion,autrePion)){
+        
+    }
+}
 
 // Fonction pour déplacer le rocher d'une case dans la direction du pion
 function deplacerRocher(pion, caseRocherId) {
